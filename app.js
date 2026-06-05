@@ -89,4 +89,4 @@ document.addEventListener('touchend', (e) => {
 }, { passive: true });
 
 progressFill.style.width = '0%';
-setTimeout(() => { nextScene(); startAutoplay(); }, 3600);
+setTimeout(() => { nextScene(); startAutoplay(); }, 6500);

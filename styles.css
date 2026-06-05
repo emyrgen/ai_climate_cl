@@ -51,3 +51,23 @@ body{color:var(--white);font-family:Inter,"Avenir Next","SF Pro Display","Segoe 
 @media (max-height:700px){.copy{bottom:calc(max(88px,var(--safe-bottom) + 78px))}.copy h1{font-size:clamp(23px,6.2vw,36px)}.copy .lead{font-size:13px;line-height:1.4;max-width:36ch}.points li{font-size:12px}.s-value{font-size:12.5px}.btn{padding:8px 0;font-size:9px}}
 .intro-bg{background:radial-gradient(circle at 50% 24%, rgba(103,243,255,.17), transparent 36%),linear-gradient(180deg,#071820 0%,#02070a 46%,#000 100%)}
 .intro-bg::before{content:"";position:absolute;inset:-20%;background:linear-gradient(rgba(103,243,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(103,243,255,.05) 1px,transparent 1px);background-size:54px 54px;transform:perspective(900px) rotateX(64deg) translateY(30%);opacity:.36}
+
+/* ---------- Cinematic logo intro ---------- */
+.intro .bg{animation:introKen 7s ease-out forwards}
+@keyframes introKen{from{transform:scale(1.12)}to{transform:scale(1.0)}}
+.intro-glow{position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 50% 42%, rgba(103,243,255,.22), transparent 46%);opacity:0;animation:introGlow 1.3s ease .1s forwards}
+@keyframes introGlow{to{opacity:1}}
+.intro-center{position:absolute;inset:0;z-index:9;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 30px}
+.intro-logo-wrap{position:relative;display:inline-block;opacity:0;transform:scale(.82);animation:introLogoIn 1.5s cubic-bezier(.18,.9,.24,1) .35s forwards}
+@keyframes introLogoIn{0%{opacity:0;transform:scale(.82)}60%{opacity:1}100%{opacity:1;transform:scale(1)}}
+.intro-logo{width:min(64vw,300px);object-fit:contain;filter:drop-shadow(0 0 26px rgba(103,243,255,.45));animation:introLogoPulse 3.4s ease-in-out 1.9s infinite}
+@keyframes introLogoPulse{0%,100%{filter:drop-shadow(0 0 22px rgba(103,243,255,.4))}50%{filter:drop-shadow(0 0 42px rgba(103,243,255,.78))}}
+.intro-shine{position:absolute;top:0;left:-35%;width:32%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.6),transparent);transform:skewX(-18deg);opacity:0;pointer-events:none;animation:introShine 1.6s ease 1.6s 1 forwards}
+@keyframes introShine{0%{left:-35%;opacity:0}12%{opacity:.9}55%{opacity:.9}100%{left:135%;opacity:0}}
+.intro-eyebrow{margin-top:28px;color:var(--cyan);font-size:12px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;opacity:0;transform:translateY(10px);animation:introUp .9s ease 1.55s forwards;text-shadow:0 2px 14px rgba(0,0,0,.6)}
+.intro-title{margin:14px 0 0;font-size:clamp(26px,7vw,46px);line-height:1.06;letter-spacing:-.03em;font-weight:780;max-width:16ch;opacity:0;transform:translateY(14px);animation:introUp 1s ease 2.0s forwards;text-shadow:0 8px 30px rgba(0,0,0,.62)}
+.intro-tag{margin:16px 0 0;max-width:30ch;color:var(--muted);font-size:clamp(12px,3.2vw,15px);line-height:1.5;font-weight:500;opacity:0;transform:translateY(12px);animation:introUp 1s ease 2.55s forwards;text-shadow:0 3px 16px rgba(0,0,0,.6)}
+@keyframes introUp{to{opacity:1;transform:translateY(0)}}
+.intro-loader{margin-top:32px;width:min(56vw,230px);height:3px;border-radius:999px;background:rgba(103,243,255,.16);overflow:hidden;opacity:0;animation:introUp .8s ease 3.0s forwards}
+.intro-loader span{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,#21d6ea,#b2ffff);box-shadow:0 0 14px rgba(103,243,255,.6);animation:introLoad 3.2s ease 3.1s forwards}
+@keyframes introLoad{to{width:100%}}
