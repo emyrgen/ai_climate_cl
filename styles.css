@@ -31,12 +31,12 @@ body{color:var(--white);font-family:Inter,"Avenir Next","SF Pro Display","Segoe 
 @keyframes copyReveal{to{opacity:1;transform:translateY(0);filter:blur(0)}}
 .eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--cyan);font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;text-shadow:0 2px 14px rgba(0,0,0,.6)}
 .eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--cyan);box-shadow:0 0 12px rgba(103,243,255,.9)}
-.copy h1{margin:13px 0 0;font-size:clamp(30px,8vw,52px);line-height:1.04;letter-spacing:-.04em;font-weight:760;max-width:15ch;text-shadow:0 8px 30px rgba(0,0,0,.66)}
-.copy .lead{margin:12px 0 0;max-width:33ch;color:var(--muted);font-size:clamp(15px,3.7vw,19px);line-height:1.46;font-weight:500;text-shadow:0 4px 18px rgba(0,0,0,.64)}
-.points{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:10px;max-width:40ch}
-.points li{position:relative;padding-left:19px;color:var(--muted);font-size:13.5px;line-height:1.4;font-weight:500;text-shadow:0 2px 14px rgba(0,0,0,.62)}
+.copy h1{margin:15px 0 0;font-size:clamp(30px,8vw,52px);line-height:1.12;letter-spacing:-.04em;font-weight:760;max-width:15ch;text-shadow:0 8px 30px rgba(0,0,0,.66)}
+.copy .lead{margin:14px 0 0;max-width:33ch;color:var(--muted);font-size:clamp(15px,3.7vw,19px);line-height:1.62;font-weight:500;text-shadow:0 4px 18px rgba(0,0,0,.64)}
+.points{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:13px;max-width:40ch}
+.points li{position:relative;padding-left:19px;color:var(--muted);font-size:13.5px;line-height:1.58;font-weight:500;text-shadow:0 2px 14px rgba(0,0,0,.62)}
 .points li::before{content:"";position:absolute;left:0;top:6px;width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 10px rgba(103,243,255,.8)}
-.stat-strip{margin:22px 0 0;display:flex;border-top:1px solid var(--line);padding-top:14px}
+.stat-strip{margin:24px 0 0;display:flex;border-top:1px solid var(--line);padding-top:16px}
 .stat-strip .stat{flex:1;padding:0 14px;border-left:1px solid rgba(103,243,255,.14)}
 .stat-strip .stat:first-child{padding-left:0;border-left:none}
 .s-label{display:block;color:var(--muted2);font-size:9.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase}
